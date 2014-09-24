@@ -1,0 +1,84 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true"></constant>
+     <constant name="struts.ui.theme" value="simple" />
+
+    <package name="default" extends="struts-default">
+        <action name="index">
+<!--         	<result>/jsp/login.jsp</result> -->
+			<result>/jsp/index.jsp</result>
+        </action>
+    
+    	<action name="*Usuario" class="action.UsuarioAction" method="{1}">
+    		<result name="success">/jsp/usuario/usuario_list.jsp</result>
+    		<result name="cadastro">/jsp/usuario/usuariocadastro.jsp</result>
+			<result name="cancelar">/jsp/index.jsp</result>
+			<result name="index">/jsp/index.jsp</result>
+			<result name="login">/jsp/login.jsp</result>
+			<result name="error">/jsp/erro.jsp</result>
+		</action>
+		
+		<action name="*Perfil" class="action.PerfilAction" method="{1}">
+    		<result name="success">/jsp/perfil/perfil_list.jsp</result>
+    		<result name="cadastro">/jsp/perfil/perfilcadastro.jsp</result>
+			<result name="cancelar">/jsp/index.jsp</result>
+			<result name="error">/jsp/erro.jsp</result>
+		</action>
+		
+		<action name="*Instrumento" class="action.InstrumentoAction" method="{1}">
+    		<result name="success">/jsp/instrumento/instrumento_list.jsp</result>
+    		<result name="cadastro">/jsp/instrumento/instrumentocadastro.jsp</result>
+			<result name="cancelar">/jsp/index.jsp</result>
+			<result name="error">/jsp/erro.jsp</result>
+		</action>
+		
+		<action name="*Professor" class="action.ProfessorAction" method="{1}">
+    		<result name="success">/jsp/professor/professor_list.jsp</result>
+    		<result name="cadastro">/jsp/professor/professorcadastro.jsp</result>
+			<result name="cancelar">/jsp/index.jsp</result>
+			<result name="error">/jsp/erro.jsp</result>
+		</action>
+		
+		
+		<action name="*Aluno" class="action.AlunoAction" method="{1}">
+    		<result name="success">/jsp/aluno/aluno_list.jsp</result>
+    		<result name="cadastro">/jsp/aluno/alunocadastro.jsp</result>
+			<result name="cancelar">/jsp/index.jsp</result>
+			<result name="error">/jsp/erro.jsp</result>
+		</action>
+		
+		<action name="*Turma" class="action.TurmaAction" method="{1}">
+			<result name="success">/jsp/turma/turma_list.jsp</result>
+    		<result name="cadastro">/jsp/turma/turmacadastro.jsp</result>
+    		<result name="matricula">/jsp/turma/matricula.jsp</result>
+    		<result name="frequencia">/jsp/turma/frequencia.jsp</result>
+			<result name="cancelar">/jsp/index.jsp</result>
+			<result name="error">/jsp/erro.jsp</result>
+		</action>
+		
+		<action name="*Emprestimo" class="action.EmprestimoAction" method="{1}">
+			<result name="success">/jsp/emprestimo/emprestimo_list.jsp</result>
+    		<result name="cadastro">/jsp/emprestimo/emprestimocadastro.jsp</result>
+			<result name="cancelar">/jsp/index.jsp</result>
+			<result name="error">/jsp/erro.jsp</result>
+		</action>
+		
+		<action name="*Relatorio" class="action.RelatorioAction" method="{1}">
+			<result name="success">/jsp/relatorio/relatorio_list.jsp</result>
+		</action>
+		
+		<action name="*Evento" class="action.EventoAction" method="{1}">
+			<result name="success">/jsp/evento/evento_list.jsp</result>
+			<result name="cadastro">/jsp/evento/eventocadastro.jsp</result>
+			<result name="cancelar">/jsp/index.jsp</result>
+			<result name="error">/jsp/erro.jsp</result>
+		</action>
+		
+		
+		
+		
+    </package>
+</struts>

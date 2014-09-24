@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-2.5.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+         http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.0.1.xsd">
+
+	<!-- Habilita a configuração por anotações -->
+	<context:annotation-config />
+
+	<!-- Define onde o Spring deverá procurar pelos beans -->
+	<context:component-scan base-package="*" />
+
+
+	<!-- Sprint Security -->
+<!-- 	<security:http auto-config="true" access-denied-page="/jsp/acessonegado.jsp"> -->
+<!-- 		<security:intercept-url pattern="/jsp/login.jsp" filters="none" /> -->
+<!-- 		<security:intercept-url pattern="/jsp/index.jsp" access="ROLE_USER" /> -->
+<!-- 		<security:intercept-url pattern="/jsp/*" access="ROLE_ADMIN" /> -->
+	
+<!-- 		<security:form-login authentication-failure-url="/jsp/acessonegado.jsp" default-target-url="/jsp/index.jsp" /> -->
+<!-- 		<security:logout logout-success-url="/jsp/index.jsp" /> -->
+<!-- 	</security:http> -->
+
+<!-- 	<bean id="servicoLogin" class="model.ServicoLogin" /> -->
+
+<!-- 	<security:authentication-provider user-service-ref="servicoLogin"> -->
+
+<!--         <security:user-service> -->
+<!--             <security:user name="root" password="root" authorities="ROLE_ADMIN, ROLE_USER, ROLE_TELLER" /> -->
+<!--  			<security:user name="mula" password="mula" authorities="ROLE_USER,ROLE_TELLER" /> -->
+<!-- 	    </security:user-service> -->
+
+<!-- 	</security:authentication-provider> -->
+
+</beans>
